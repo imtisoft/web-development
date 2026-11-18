@@ -43,7 +43,47 @@
             document.write("<br>"+key+": "+students[key]);
         }
 
+        function nestedForLoop(){
+            let i;
+        for (i = 1; i <= 2; i++) { // Outer Loop
+            console.log(`--- Outer Loop Turn ${i} ---`);
 
+            for (let j = 1; j <= 3; j++) { // Inner Loop
+                console.log(`  Inner Loop j = ${j}`);
+            }
+        }
+
+        }
+
+    nestedForLoop();
+
+    function demo(){
+        if(true){
+         let a=10; // scope of 'a' is limited to this block
+         var b=20; // scope of 'b' is limited to the function
+         window.alert(a); 
+        }
+    
+    window.alert(b); // This will work because 'b' is declared with var and has function scope
+    window.alert(a); // This will throw an error because 'a' is declared with let and has block scope
+}
+//demo();
+
+function generateOTP() {
+    let otp = "";
+    for (let i = 0; i < 6; i++) {
+        otp += Math.floor(Math.random() * 10);
+    }
+    window.alert("Your OTP is: " + otp);
+}
+
+//generateOTP();
+
+function Greeting(name="Mr. Smith", age=32) {
+    window.alert("Hello! Welcome"+" "+name+"! You are "+age+" years old.");
+}
+
+Greeting(); // Output: Hello! Welcome Imtiyaz! You are 25 years old.   
     </script>
 </body>
 </html>

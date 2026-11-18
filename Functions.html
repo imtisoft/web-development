@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // Global variable
+        const appName = "TaskTracker";
+
+        function greetUser() {
+        // Accessible inside functions
+        console.log("Welcome to " + appName); 
+        }
+
+        greetUser(); // Output: Welcome to TaskTracker
+        console.log(appName); // Output: TaskTracker
+
+        function calculateTotal() {
+        // Local (function-scoped) variable
+        let tax = 5; 
+
+        if (true) {
+            // Local (block-scoped) variable
+            const discount = 2; 
+            console.log(tax - discount); // Output: 3
+            }
+            
+        }
+
+        calculateTotal();
+
+        // Immediately Invoked Function Expression (IIFE)
+        (function() {
+            window.alert("Hello from IIFE!");
+        })(); // IIFE is invoked immediately after its definition
+
+        // Named Function
+        function greet() {
+            return "Hello!";
+        }
+        window.alert(greet()); // Calling the named function
+
+        // Anonymous Function
+        const greetAnonymous = function() {
+            return "Hello from anonymous function!";
+        };
+        window.alert(greetAnonymous()); // Calling the anonymous function
+
+        //Function Expression
+        const greetExpression = function() {
+            return "Hello from function expression!";
+        };      
+       window.alert(greetExpression()); // Calling the function expression
+
+        // Arrow Function
+        const greetArrow = () => {
+            return "Hello from arrow function!";
+        };
+        window.alert(greetArrow()); // Calling the arrow function
+
+        
+
+
+        
+    </script>
+</body>
+</html>
